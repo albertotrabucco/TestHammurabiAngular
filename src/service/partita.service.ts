@@ -11,7 +11,7 @@ export class PartitaService {
   private ApiConnection= environment.apiConnectionUrl;
   constructor(private http: HttpClient) { }
 
-  getPartita (): Observable<PartitaModel> {
-    return this.http.get<PartitaModel>(`${this.ApiConnection}/turno/{1}`);
+  getPartita (): Observable<PartitaModel[]> {
+    return this.http.get<PartitaModel[]>(`${this.ApiConnection}/hammurabi/all`);
   }
 }

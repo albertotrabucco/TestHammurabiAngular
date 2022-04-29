@@ -1,4 +1,6 @@
-<div>{partita.id}</div>
-  <div>{partita.popolazione}</div>
-    <div>{partita.grano}</div>
-      <div>{partita.terreno}</div>
+<div *ngFor="let turno of partita">
+<div>{{turno.id}}</div>
+<div>{{turno.popolazione}}</div>
+<div>{{turno.grano}}</div>
+<div>{{turno.terreno}}</div>
+</div>

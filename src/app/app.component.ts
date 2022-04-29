@@ -10,7 +10,7 @@ import {PartitaService} from "../service/partita.service";
 })
 export class AppComponent implements OnInit{
   title = 'TestHammurabiAngular';
- public partita!: PartitaModel;
+ public partita!: PartitaModel[];
 
  constructor(private partitaService: PartitaService) {
  }
@@ -20,7 +20,7 @@ export class AppComponent implements OnInit{
 
   public getTurno(): void {
     this.partitaService.getPartita().subscribe(
-      (response: PartitaModel) => {
+      (response: PartitaModel[]) => {
         this.partita = response;
       },
       (error: HttpErrorResponse) => {
